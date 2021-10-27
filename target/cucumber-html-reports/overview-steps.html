@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no release 1.0) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Cucumber Automation Framework</td>
+        <td>release 1.0</td>
+      <td>27 Oct 2021, 13:31</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.trycloud.step_definitions.DashboardStepDefs.user_log_in_with_valid_credentials()</td>
+              <td>1</td>
+              <td class="duration" data-value="20465000000">20.465</td>
+              <td class="duration" data-value="20465000000">20.465</td>
+              <td class="duration" data-value="20465000000">20.465</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trycloud.step_definitions.DashboardStepDefs.verify_the_user_see_the_following_modules(java.util.List&lt;java.lang.String&gt;)</td>
+              <td>1</td>
+              <td class="duration" data-value="1436000000">1.436</td>
+              <td class="duration" data-value="1436000000">1.436</td>
+              <td class="duration" data-value="1436000000">1.436</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trycloud.step_definitions.FileActionsStepDefs.user_choose_option(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="5380000000">5.380</td>
+              <td class="duration" data-value="5380000000">5.380</td>
+              <td class="duration" data-value="5380000000">5.380</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trycloud.step_definitions.FileActionsStepDefs.user_click_action_icon_from_any_file_on_the_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="1850000000">1.850</td>
+              <td class="duration" data-value="1850000000">1.850</td>
+              <td class="duration" data-value="1850000000">1.850</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trycloud.step_definitions.FileActionsStepDefs.user_click_sub_module_on_the_left_side(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="3324000000">3.324</td>
+              <td class="duration" data-value="3324000000">3.324</td>
+              <td class="duration" data-value="3324000000">3.324</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trycloud.step_definitions.FileActionsStepDefs.verify_the_chosen_file_is_listed_on_the_table()</td>
+              <td>1</td>
+              <td class="duration" data-value="532000000">0.532</td>
+              <td class="duration" data-value="532000000">0.532</td>
+              <td class="duration" data-value="532000000">0.532</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trycloud.step_definitions.FilesStepDefs.user_click_the_top_left_checkbox_of_the_table()</td>
+              <td>1</td>
+              <td class="duration" data-value="2317000000">2.317</td>
+              <td class="duration" data-value="2317000000">2.317</td>
+              <td class="duration" data-value="2317000000">2.317</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trycloud.step_definitions.FilesStepDefs.user_clicks_module(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="8076000000">8.076</td>
+              <td class="duration" data-value="8076000000">8.946</td>
+              <td class="duration" data-value="24228000000">24.228</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trycloud.step_definitions.FilesStepDefs.user_on_the_dashboard_page()</td>
+              <td>3</td>
+              <td class="duration" data-value="22653666666">22.653</td>
+              <td class="duration" data-value="22653666666">28.804</td>
+              <td class="duration" data-value="67961000000">1:7.961</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trycloud.step_definitions.FilesStepDefs.verify_all_the_files_are_selected()</td>
+              <td>1</td>
+              <td class="duration" data-value="64000000">0.064</td>
+              <td class="duration" data-value="64000000">0.064</td>
+              <td class="duration" data-value="64000000">0.064</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trycloud.step_definitions.FilesStepDefs.verify_the_page_title_is(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="455000000">0.455</td>
+              <td class="duration" data-value="455000000">0.455</td>
+              <td class="duration" data-value="455000000">0.455</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trycloud.step_definitions.Hooks.setupDriver()</td>
+              <td>10</td>
+              <td class="duration" data-value="4614300000">4.614</td>
+              <td class="duration" data-value="4614300000">8.996</td>
+              <td class="duration" data-value="46143000000">46.143</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trycloud.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)</td>
+              <td>10</td>
+              <td class="duration" data-value="1262100000">1.262</td>
+              <td class="duration" data-value="1262100000">2.025</td>
+              <td class="duration" data-value="12621000000">12.621</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trycloud.step_definitions.LoginStepDefs.message_should_be_displayed(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trycloud.step_definitions.LoginStepDefs.user_click_login_button()</td>
+              <td>6</td>
+              <td class="duration" data-value="7254000000">7.254</td>
+              <td class="duration" data-value="7254000000">18.525</td>
+              <td class="duration" data-value="43524000000">43.524</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trycloud.step_definitions.LoginStepDefs.user_enter_valid_and(java.lang.String,java.lang.String)</td>
+              <td>6</td>
+              <td class="duration" data-value="420333333">0.420</td>
+              <td class="duration" data-value="420333333">0.891</td>
+              <td class="duration" data-value="2522000000">2.522</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trycloud.step_definitions.LoginStepDefs.user_on_the_login_page()</td>
+              <td>7</td>
+              <td class="duration" data-value="2968714285">2.968</td>
+              <td class="duration" data-value="2968714285">4.577</td>
+              <td class="duration" data-value="20781000000">20.781</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.trycloud.step_definitions.LoginStepDefs.user_should_be_at_dashboard_page()</td>
+              <td>3</td>
+              <td class="duration" data-value="48666666">0.048</td>
+              <td class="duration" data-value="48666666">0.057</td>
+              <td class="duration" data-value="146000000">0.146</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>18</td>
+            <td>60</td>
+            <td class="duration">4.229</td>
+            <td class="duration">1:7.961</td>
+            <td class="duration">4:13.749</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
