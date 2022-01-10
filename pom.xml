@@ -75,11 +75,11 @@
                     <runOrder>Alphabetical</runOrder>
                     <parallel>methods</parallel>
                     <useUnlimitedThreads>true</useUnlimitedThreads>
-                    <!--<threadCount>4</threadCount>
-                    <perCoreThreadCount>false</perCoreThreadCount>-->
+                    <threadCount>4</threadCount>
+                    <perCoreThreadCount>false</perCoreThreadCount>
                     <includes>
                         <include>**/*TestRunner.java</include>
-                        <!--                         <include>**/*FailedTestRunner.java</include>-->
+                        <include>**/*FailedTestRunner.java</include>
                     </includes>
 
                 </configuration>
